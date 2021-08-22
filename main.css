@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+:root{
+    --header-color: rgb(36, 37, 38);
+    --header-input-color:#3A3B3C;
+    --input-text-color: #A8ABAF;
+    --main-color: rgb(24, 25, 26);
+    --hover-nav-header: rgba(105, 105, 105, 0.322);
+    --text-color: #E7E9ED;
+    --icons-invert: invert(0.89) sepia(0.06);
+}
+
+body{
+    background-color: var(--main-color);
+    color:var(--text-color);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size:16px;
+}
+
+.header{
+    width:100vw;
+    height:3.6rem;
+    position:fixed;
+    top:0;
+    z-index:10;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    box-shadow: 2px 10px 5px -3px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 2px 10px 5px -3px rgba(0,0,0,0.22);
+    -moz-box-shadow: 2px 10px 5px -3px rgba(0,0,0,0.22);
+}
+
+.header__search{
+    width:25%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header__input{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:75%;
+    height:100%;
+}
+
+.input__icon{
+    width:5rem;
+    height:2.5rem;
+    border-top-left-radius: 4.375rem;
+    border-bottom-left-radius: 4.375rem;
+    background-color:var(--header-input-color);
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEBElEQVRoge2YwW8bRRjF37drlRw4IgQlCKUX1FNLOFSoxSeuNNl1bMeKxN8AVBBQD7hKDqSqEPwRUZzdrNfOpYdKBFXNpSo0qlQpXFARrYIqeoXEsudxsJt6ZzeOvWM3kZp3229n3pufxzOaWeBEJ3q1JWk6VYJgErSnQGYBeQvgux27v0C1Q5HbEKtempm6P8zBJqlvAJJS8es5ES4CeL9P+21AXS3OOKGIMOUYeyf008jz1ida0loW4KNUKZTNlt2am8vl/kzVv4cOBVgNgotQVpXAmyZBBJ4BmCnlnV9MfHT1BFgN6lkqdQvAKe3VHiAhoOoW7fu7u2OPAWBsbHdcSesDiEyDcJL6WeQnhYJ7Z+QAnrc+oaR1F8Ab3XUCHpqYL5WcR72M2/3VEsC8FvhUNXHhsP79KhGApFTWapvaf74F4spswflpkICKH34O4AYA+0WAbM4Wpi+lGbAuK6m4uhbOxBZsisEDwGze+RHk15Gi8GLFr7qDeiUpBkBSAFmI1AAvzeCfa7bg/iDgWqQospjWr1sxAN+vTSK6zzeUpb41DVJN+QrA3n6BOOt54XlT3xiAsuRytCLVuVzuD9OgUsl5RKDeXaNgytQ3vgbIbLSg6rE2aUXRvbKJ7QZQ0iJ+J9KA9j3TkOeyIb92P1PLSqMkgLejj3t/m4Z0eT3RCiMBGMmhCwAajdf1POOsOIBgp/tRqcxp05D9sLF/dS/j2Y0DKEamWTLyoWnIfhgt3Uv/Sw3uqRcocjvyDPOt7oWXtkWTG6aeCX8hK7rVEY7nrU+YBi0HwRkBpiNFmzdNfWMAs7nLW+2b1L5OtU+VZrJb1nVEj9dbRdc13qJjAO2rn7oarTLfOVWm0qofXoEgp3kuDOOamXgaLc44ISibWvnGylrti0EDKl71SwLRGSQ3th8+qA3qlaQDLzTLQfBeRll39aukgGtNi/OHnY+Wg+CM3bKu6788gWc2M+cKhU+Nd6D2eHpoxa99LOAtAK9prxoEaqDUaTV/yyj1GACaljUuKjMJ4VRnwepXSgD4vWEz+5nrPh05AAB4XvUSRYJhXOoF+AfaJxkC10p5p5zWN3ENdKtQcO+oJi4krIn+RW7YzJxr2PpJFxDguxU/TA0w0Je5il91IbII4myfXbYALmw/fFArl8uq7REm7jxpZyLVp0XPC893LiNZQk4DHO947RB4IuTPsHmz6Lr39K3yIAAgHUQqABOt+LV5Ab8/6L2AS8W8+02/fi8dABguxJEAAMODODIAYDgQRwoAmEMcOQBgBnEsAID0EMcGAEgHcehR4mWqlJ9eIqTHopX/YpVRDiitkmZCgHIx71zT2x5LACAKcdDgj71W/LBsclI90YleBf0PkpCjo0vJIXMAAAAASUVORK5CYII=");
+    background-size:35%;
+    background-position: center;    
+    background-repeat: no-repeat;
+}
+
+.input__input{
+    width:130px;
+    height:2.5rem;
+    border:0;
+    background-color: var(--header-input-color);
+    outline: none;
+}
+
+.input__leftside{
+    width:5rem;
+    height:2.5rem;
+    border-top-right-radius: 4.375rem;
+    border-bottom-right-radius: 4.375rem;
+    background-color:var(--header-input-color);
+}
+
+.header_navigation{
+    width:35rem;
+    height: 100%;
+}
+
+.nav__list{
+    width:100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav__item{
+    width:20rem;
+    height:3.125rem;
+    border-radius:0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav__item:hover{
+    background-color:var(--hover-nav-header);
+}
+
+.color{
+    fill: var(--input-text-color);      
+}
+
+
+ul li{
+    list-style: none;
+}
+
+
+.header__user{
+    width:400px;
+    height: 100%;
+}
+
+.nav__user{
+    width:100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.user__item--user{
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    cursor: pointer;
+    width:90px;    
+    height: 35px;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.user__item--user:hover{
+    background-color:var(--hover-nav-header);
+}
+
+.user__item--user span{
+    font-size: 15px !important;
+    font-weight: 900;
+}
+
+
+.user__img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url("https://scontent.fmex12-1.fna.fbcdn.net/v/t1.6435-9/46662387_1440290752768360_8773798014478188544_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeHs2Z2vkY1Rs7e_zNgLYO_BFHvsdlPC7YQUe-x2U8LthMEbhgVHvbWWXKul4WZ2Zkc9zmTTnw-T7sZQFNAiHy8g&_nc_ohc=MRYCdub_ioIAX_q_Gv5&_nc_ht=scontent.fmex12-1.fna&oh=0826514beeaeabe305ea3aa5eed9067c&oe=61451B75");
+    background-size:180%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.user__item{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--hover-nav-header);
+    filter: var(--icons-invert);
+    cursor: pointer;
+}
+
+
+.main{
+    width:100%;
+    height:100%;
+    margin-top:80px;
+}
+
+
+.main__content{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__user{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.user__links{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.links__items{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.content__user:nth-child(1){
+    width: 200px;
+    height:100vh;
+}
+
+
+
+
+
+
+
